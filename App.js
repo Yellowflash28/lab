@@ -1,19 +1,21 @@
 import React from 'react';
-import {…………………} from 'react-router-dom'; 
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'; 
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import { maxHeaderSize } from 'http';
 
 function App() {
-  return (
-    <>
-
-
-            // fill the routing part
-
-
-    </>
-  );
+    return (
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </Router>
+    )
 }
 
 export default App;
+
